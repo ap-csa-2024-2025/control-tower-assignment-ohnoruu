@@ -37,24 +37,35 @@ public class Main
    System.out.println("The difference in height between Airplane 2 and Airplane 3 is " + (airplane2.getAlt() - airplane3.getAlt()));
    
    // TODO: Airplane 1 changes
-   airplane1.move(8.0, 135);
+   airplane1.move(airplane2.distTo(airplane3), 65);
+   airplane1.gainAlt();
+   airplane1.gainAlt();
+   airplane1.gainAlt();
    // TODO: Airplane 2 changes
-   airplane2.move(5.0, 55);
+   airplane2.move(8.0, 135);
+   airplane2.loseAlt();
+   airplane2.loseAlt();
    // TODO: Airplane 3 changes
-   
+   airplane3.move(5.0, 55);
+   airplane3.loseAlt();
+   airplane3.loseAlt();
+   airplane3.loseAlt();
+   airplane3.loseAlt();
    // TODO: Print new positions of airplanes
    System.out.println("\nNew Positions: ");
-   
+   System.out.println(airplane1.toString());
+   System.out.println(airplane2.toString());
+   System.out.println(airplane3.toString());
    // TODO: Print new distances between airplanes
    System.out.println("\nNew Distances:");
-   System.out.println("The distance between Airplane 1 and Airplane 2 is ");
-   System.out.println("The distance between Airplane 1 and Airplane 3 is ");
-   System.out.println("The distance between Airplane 2 and Airplane 3 is ");
+   System.out.println("The distance between Airplane 1 and Airplane 2 is " + airplane1.distTo(airplane2) + " miles");
+   System.out.println("The distance between Airplane 1 and Airplane 3 is " + airplane1.distTo(airplane3) + " miles");
+   System.out.println("The distance between Airplane 2 and Airplane 3 is " + airplane2.distTo(airplane3) + " miles");
    
    // TODO: Print new heights between airplanes
    System.out.println("\nNew Height Differences:");
-   System.out.println("The difference in height between Airplane 1 and Airplane 2 is ");
-   System.out.println("The difference in height between Airplane 1 and Airplane 3 is ");
-   System.out.println("The difference in height between Airplane 2 and Airplane 3 is ");
+   System.out.println("The difference in height between Airplane 1 and Airplane 2 is " + (airplane1.getAlt() - airplane2.getAlt()));
+   System.out.println("The difference in height between Airplane 1 and Airplane 3 is " + (airplane1.getAlt() - airplane3.getAlt()));
+   System.out.println("The difference in height between Airplane 2 and Airplane 3 is " + (airplane2.getAlt() - airplane3.getAlt()));
   }
 }
